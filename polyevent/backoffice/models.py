@@ -16,6 +16,7 @@ class Event(models.Model):
     creation_datetime = models.DateTimeField()
     last_update = models.DateTimeField()
     isCancelled = models.BooleanField(default = false)
+    isVisible = models.BooleanField(default = false)
 
 class Activity(models.Model):
     event = models.ForeignKey(Event)
@@ -29,3 +30,4 @@ class Activity(models.Model):
     creation_datetime = models.DateTimeField()
     last_update = models.DateTimeField()
     isCancelled = models.BooleanField(default = false)
+    isVisible = models.BooleanField(default = false)
