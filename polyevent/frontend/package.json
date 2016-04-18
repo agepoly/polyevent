@@ -1,0 +1,26 @@
+{
+  "name": "polyevent-frontend",
+  "version": "0.0.1",
+  "description": "Frontend for PolyEvent",
+  "main": "js/app.js",
+  "dependencies": {
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "flux": "^2.1.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "watchify": "^3.4.0",
+    "reactify": "^1.1.1"
+  },
+  "scripts": {
+    "start": "watchify -o ../backend/static/backend/bundle.js -v -d app.js"
+  },
+  "author": "Louis Merlin",
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}
