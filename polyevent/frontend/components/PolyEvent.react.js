@@ -3,7 +3,7 @@ var React = require('react');
 var PolyEvent = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className="pushable">
         <Sidebar />
         <div className="pusher">
           <Button />
@@ -16,7 +16,7 @@ var PolyEvent = React.createClass({
 var Sidebar = React.createClass({
   render: function() {
     return (
-      <div className="ui sidebar inverted vertical menu">
+      <div className="ui sidebar inverted vertical menu visible">
         <a className="item">
           1
         </a>
@@ -32,8 +32,15 @@ var Sidebar = React.createClass({
 });
 
 var Button = React.createClass({
+  componentDidMount: function() {
+    $('.ui.sidebar').sidebar({
+      context: $('.pushable'),
+      closable: false,
+      dimPage: false
+    });
+  },
   getInitialState: function() {
-    return {toggled: false};
+    return {toggled: true};
   },
   handleClick: function() {
     this.setState({toggled: !this.state.toggled});
