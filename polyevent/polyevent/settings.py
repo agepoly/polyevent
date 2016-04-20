@@ -101,13 +101,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Uncomment when user authentification process is ready
+#AUTH_USER_MODEL = 'users.PolyEventUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Zurich'
 
 USE_I18N = True
 
@@ -115,8 +117,30 @@ USE_L10N = True
 
 USE_TZ = True
 
+DATE_FORMAT = "d.m.Y"
+
+DATETIME_FORMAT = "d.m.Y H:i:s"
+
+#LANGUAGES = (
+#    ('en-us', _('English')),
+#    ('fr-ch', _('French')),
+#)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#####################
+# Project specifics #
+#####################
+
+#AUTHENTICATION_BACKENDS = ('app.tequila.Backend', 'django.contrib.auth.backends.ModelBackend',)
+
+#TEQUILA_SERVER = 'https://tequila.epfl.ch'  # Url of tequila server
+#TEQUILA_SERVICE = 'PolyEvent'  # Title used in tequila
+#TEQUILA_AUTOCREATE = True  # Auto create users ?
+#TEQUILA_FAILURE = '/'  # Where to redirect user if there is a problem
+
+#LOGIN_URL = 'app.tequila.login'
+#LOGIN_REDIRECT_URL = '/'

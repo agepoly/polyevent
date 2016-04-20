@@ -1,2 +1,2 @@
-Django
+Django==1.9.4
 django-location-field==2.0.0b0
