@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'location_field.apps.DefaultConfig',
+    'users',
+    'backoffice',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -71,6 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'polyevent.wsgi.application'
 
+AUTH_USER_MODEL = 'users.PolyEventUser'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
@@ -130,17 +133,3 @@ DATETIME_FORMAT = "d.m.Y H:i:s"
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-
-#####################
-# Project specifics #
-#####################
-
-#AUTHENTICATION_BACKENDS = ('app.tequila.Backend', 'django.contrib.auth.backends.ModelBackend',)
-
-#TEQUILA_SERVER = 'https://tequila.epfl.ch'  # Url of tequila server
-#TEQUILA_SERVICE = 'PolyEvent'  # Title used in tequila
-#TEQUILA_AUTOCREATE = True  # Auto create users ?
-#TEQUILA_FAILURE = '/'  # Where to redirect user if there is a problem
-
-#LOGIN_URL = 'app.tequila.login'
-#LOGIN_REDIRECT_URL = '/'
