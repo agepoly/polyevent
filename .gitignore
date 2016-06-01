@@ -64,3 +64,6 @@ target/
 
 # Mac Stuff to ordonate things
 *.DS_Store
+
+# TEMPORARY ignore frontend file since working on the backend
+polyevent/frontend/*

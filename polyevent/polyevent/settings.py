@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Uncomment when user authentification process is ready
-#AUTH_USER_MODEL = 'users.PolyEventUser'
+AUTH_USER_MODEL = 'users.PolyEventUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
